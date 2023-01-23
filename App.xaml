@@ -1,0 +1,9 @@
+﻿<Application x:Class="音声无损压缩器.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:音声无损压缩器"
+             StartupUri="View/MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
