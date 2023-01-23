@@ -43,7 +43,9 @@
 			         dd:DragDrop.IsDragSource="True"
 					 dd:DragDrop.IsDropTarget="True"
 					 dd:DragDrop.DropHandler="{Binding}"
-					 ItemsSource="{Binding audioFileInfos}" Margin="10,10,0,10">
+					 ItemsSource="{Binding audioFileInfos}" 
+					 Margin="10,10,0,10"
+					 SelectedItem="{Binding selectedItem,Mode=TwoWay}">
 				<ListBox.ItemTemplate>
 					<DataTemplate>
 						<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">

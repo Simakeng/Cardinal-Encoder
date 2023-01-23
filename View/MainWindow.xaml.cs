@@ -33,18 +33,6 @@ namespace 音声无损压缩器
 		private void MainWindowLoaded(object sender, RoutedEventArgs e)
 		{
 
-
-			//var arr = new ArrayList();
-			//for (int i = 0; i < 10; i++) 
-			//{
-			//	var o = new DLSiteHelper.AudioFileInfo();
-			//	o.fileName = "testFile " + i.ToString();
-			//	o.fileDesc = "testADesc";
-			//	o.imgUriPath = "Assets/place_holder.png";
-			//	arr.Add(o);
-			//}
-			//lbFileItem.ItemsSource = arr;
-
 		}
 
 		private void btnOnStartEncoding(object sender, RoutedEventArgs e)
@@ -60,18 +48,6 @@ namespace 音声无损压缩器
 			return;
 		}
 
-		private void ctmOnDeleteFileInfo(object sender, RoutedEventArgs e)
-		{
-			var file = lbFileItem.SelectedItem as AudioFileInfoViewModel;
-			if (file == null)
-				return;
-			var vm = this.DataContext as MainWindowViewModel;
-			if (vm == null)
-				return;
-			vm.RemoveAudioFile(file);
-
-		}
-
 		private void ctmOnViewFilePath(object sender, RoutedEventArgs e)
 		{
 			var file = lbFileItem.SelectedItem as AudioFileInfo;
@@ -80,19 +56,5 @@ namespace 音声无损压缩器
 
 			Process.Start("explorer.exe", "/select," + file.filePath);
 		}
-
-		//private void FileDragEnter(object sender, DragEventArgs e)
-		//{
-		//	if (e.Data.GetDataPresent(DataFormats.FileDrop))
-		//		e.Effects = DragDropEffects.Link;
-		//	else
-		//		e.Effects = DragDropEffects.None;
-		//}
-
-		//private void FileDragDrop(object sender, DragEventArgs e)
-		//{
-		//	var fileNames = (System.Array)e.Data.GetData(DataFormats.FileDrop);
-		//	return;
-		//}
 	}
 }

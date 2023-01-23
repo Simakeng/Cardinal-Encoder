@@ -25,7 +25,9 @@ namespace 音声无损压缩器.ViewModel
 
 			cmdOnDeleteFileInfo = new RelayCommand(() =>
 			{
-				Debug.WriteLine("test");
+				var audioFile = selectedItem as AudioFileInfoViewModel;
+				if (selectedItem != null)
+					RemoveAudioFile(audioFile);
 			});
 		}
 
@@ -45,6 +47,8 @@ namespace 音声无损压缩器.ViewModel
 		}
 
 		public ICommand cmdOnDeleteFileInfo { get; private set; }
+
+		public object selectedItem { get; set; }
 
 		public string RJID { get; set; }
 		public ObservableCollection<AudioFileInfoViewModel> audioFileInfos
